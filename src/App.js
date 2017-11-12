@@ -9,6 +9,9 @@ import logo from './assets/logo.svg';
 import './style/App.css';
 import reducers from './reducers';
 
+import Form from './components/Form';
+import Display from './components/Display';
+
 const store = createStore(reducers, {}, applyMiddleware(ReduxLogger));
 
 function App() {
@@ -17,11 +20,10 @@ function App() {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Welcome to App Example</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Form />
+        <Display />
       </div>
     </Provider>
   );
